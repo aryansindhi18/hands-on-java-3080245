@@ -6,6 +6,15 @@ public class Customer {
   private String name;
   private String password;
   private int accountId;
+  private boolean isAuthenticated;
+
+  public boolean isAuthenticated() {
+    return this.isAuthenticated;
+  }
+
+  public void setIsAuthenticated(boolean isAuthenticated) {
+    this.isAuthenticated = isAuthenticated;
+  }
 
   public Customer(int id, String username, String name, String password, int accountId) {
     setId(id);
@@ -13,6 +22,7 @@ public class Customer {
     setName(name);
     setPassword(password);
     setAccountId(accountId);
+    setIsAuthenticated(false);
   }
 
   public int getId() {
